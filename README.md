@@ -1,7 +1,21 @@
-# agh-wfiis-thesis-tex
+# AGH WFiIS thesis latex template
+
 Nieoficjalny szablon LaTeX dla prac dyplomowych na wydziale WFiIS AGH.
 
 Przed użyciem należy zobaczyć czy jest on zgodny z **obecnymi** wymaganiami/wzorami prac dyplomowych.
+
+Główny plik szablonu to `praca.tex` i to jego należy kompilować. Jest w nim również trochę `TODO` które **powinno się przejrzeć**.
+
+Szablon wspiera między innymi takie rzeczy jak:
+* nagłówki oraz numeracja stron
+* bibliografię (przez BibTeX - UWAGA: w przypadku wykorzystywania TexStudio warto zmodyfikować trochę opcję budowania - jest to opisane w praca.tex przy biblografii)
+* polskie znaki diaktryczne
+* zmianę języka na angielski
+* i inne
+
+Szablon był testowany w edytorze TexStudio.
+
+---
 
 Szablon bazuje na:
 
