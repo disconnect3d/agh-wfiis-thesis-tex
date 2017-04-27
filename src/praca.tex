@@ -1,0 +1,327 @@
+% TODO: Można zmienić na angielski wybierając drugą linię
+\documentclass[11pt]{aghdpl}
+% \documentclass[en,11pt]{aghdpl}
+
+% TODO:
+% Lista wszystkich języków stanowiących języki pozycji bibliograficznych użytych w pracy.
+% (Zgodnie z zasadami tworzenia bibliografii każda pozycja powinna zostać utworzona zgodnie z zasadami języka, w którym dana publikacja została napisana.)
+\usepackage[english,polish]{babel}
+
+% Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego).
+% TODO: Można zmienić na angielski
+\usepackage{polski}
+
+\usepackage[utf8]{inputenc}
+
+% dodatkowe pakiety
+
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+
+% Paczka wyłącza pokazywanie numeru strony oraz nagłówków na pustych stronach
+% TODO: Można wyłączyć
+\usepackage{emptypage}
+
+% Dodatkowe kolory:
+\usepackage{colortbl}
+\definecolor{redi}{RGB}{255,38,0}
+\definecolor{redii}{RGB}{200,50,30}
+\definecolor{yellowi}{RGB}{255,251,0}
+\definecolor{bluei}{RGB}{0,150,255}
+\definecolor{blueii}{RGB}{135,247,210}
+\definecolor{blueiii}{RGB}{91,205,250}
+\definecolor{blueiv}{RGB}{115,244,253}
+\definecolor{bluev}{RGB}{1,58,215}
+\definecolor{orangei}{RGB}{240,143,50}
+\definecolor{yellowii}{RGB}{222,247,100}
+\definecolor{greeni}{RGB}{166,247,166}
+\definecolor{gray}{RGB}{200, 200, 200}
+\definecolor{lgray}{RGB}{240, 240, 240}
+
+\usepackage{siunitx}
+
+% Ustawienia marginesów kolumn w array
+% TODO: Można usunąć/zmodyfikować
+\usepackage{array}
+\newcolumntype{0}{>{\centering\arraybackslash}m{0.5cm}}
+\newcolumntype{1}{>{\centering\arraybackslash}m{1cm}}
+\newcolumntype{Q}{>{\centering\arraybackslash}m{1.5cm}}
+\newcolumntype{2}{>{\centering\arraybackslash}m{2cm}}
+\newcolumntype{W}{>{\centering\arraybackslash}m{2.5cm}}
+\newcolumntype{3}{>{\centering\arraybackslash}m{3cm}}
+\newcolumntype{4}{>{\centering\arraybackslash}m{4cm}}
+\newcolumntype{5}{>{\centering\arraybackslash}m{5cm}}
+\newcolumntype{6}{>{\centering\arraybackslash}m{6cm}}
+\newcolumntype{7}{>{\centering\arraybackslash}m{7cm}}
+\newcolumntype{8}{>{\centering\arraybackslash}m{8cm}}
+
+\usepackage{listings}
+
+% Polskie literki w listingach:
+\lstset{
+    literate=
+    {ą}{{\k{a}}}1 {Ą}{{\k{A}}}1 
+    {ł}{{\l{}}}1 {Ł}{{\L{}}}1 
+    {ń}{{\'n}}1 {Ń}{{\'N}}1 
+    {ę}{{\k{e}}}1 {Ę}{{\k{E}}}1 
+    {ś}{{\'s}}1 {Ś}{{\'S}}1 
+    {ż}{{\.z}}1 {Ż}{{\.Z}}1 
+    {ó}{{\'o}}1 {Ó}{{\'O}}1 
+    {ź}{{\'z}}1 {Ź}{{\'Z}}1 
+    {ć}{{\'c}}1 {Ć}{{\'C}}1
+}
+
+% Kolorowanie składni języka C++
+% TODO: Można usunąć jeśli się nie potrzebuje
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+    language=C++,
+    basicstyle=\ttfamily,
+    breaklines=true,
+    breakatwhitespace=true, %%%
+    basicstyle=\footnotesize,
+    %upquote=true,
+    aboveskip={0.75\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    %extendedchars=false,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    %frame=single,
+    numbers=left,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    %backgroundcolor=\color{lbcolor},
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.4,0.4,0.4},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+    numberstyle={\footnotesize\color[rgb]{0.205, 0.142, 0.73}}
+}
+
+\usepackage[hidelinks]{hyperref}
+
+% --- < bibliografia > ---
+%
+% TODO: Dla TeXstudio warto przeczytać poniższe!
+% UWAGA: Żeby bibliografia działała gdy używamy TeXstudio, to należy zmodyfikować quick build w opcjach, tak aby wykonywane były polecenia:
+% 	PdfLaTeX
+% 	BibTeX
+% 	PdfLaTeX
+% 	PdfLaTeX
+%
+% Więcej informacji na:
+% 	https://tex.stackexchange.com/a/216325
+%
+
+\usepackage[
+	backend=bibtex,
+	style=numeric,
+	sorting=none,
+	% Zastosuj styl wpisu bibliograficznego właściwy językowi publikacji.
+	language=autobib,
+	autolang=other,
+	% Zapisuj datę dostępu do strony WWW w formacie RRRR-MM-DD.
+	urldate=iso8601,
+	% Nie dodawaj numerów stron, na których występuje cytowanie.
+	backref=false,
+	% Podawaj ISBN.
+	isbn=true,
+	% Nie podawaj URL-i, o ile nie jest to konieczne.
+	url=false,
+	% Ustawienia związane z polskimi normami dla bibliografii.
+	maxbibnames=3,
+]{biblatex}
+
+\usepackage{csquotes}
+% Ponieważ `csquotes` nie posiada polskiego stylu, można skorzystać z mocno zbliżonego stylu chorwackiego.
+\DeclareQuoteAlias{croatian}{polish}
+
+% Bibliografia musi być uzupełniona w tym pliku:
+\addbibresource{bibliografia.bib}
+
+% Nie wyświetlaj wybranych pól.
+%\AtEveryBibitem{\clearfield{note}}
+
+
+% ------------------------
+% --- < listingi > ---
+
+% Użyj czcionki kroju Courier.
+\usepackage{courier}
+
+\usepackage{listings}
+\lstloadlanguages{TeX}
+
+% Polskie literki:
+\lstset{
+	literate={ą}{{\k{a}}}1
+           {ć}{{\'c}}1
+           {ę}{{\k{e}}}1
+           {ó}{{\'o}}1
+           {ń}{{\'n}}1
+           {ł}{{\l{}}}1
+           {ś}{{\'s}}1
+           {ź}{{\'z}}1
+           {ż}{{\.z}}1
+           {Ą}{{\k{A}}}1
+           {Ć}{{\'C}}1
+           {Ę}{{\k{E}}}1
+           {Ó}{{\'O}}1
+           {Ń}{{\'N}}1
+           {Ł}{{\L{}}}1
+           {Ś}{{\'S}}1
+           {Ź}{{\'Z}}1
+           {Ż}{{\.Z}}1,
+	basicstyle=\footnotesize\ttfamily,
+}
+
+% ------------------------
+% Określamy nazwy 'table' oraz 'figure':
+\AtBeginDocument{
+	\renewcommand{\tablename}{Tabela}
+	\renewcommand{\figurename}{Rys.}
+}
+
+% ------------------------
+% --- < tabele > ---
+
+% TODO: Dodatkowe paczki do tabel, można usunąć
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage[flushleft]{threeparttable}
+
+% defines the X column to use m (\parbox[c]) instead of p (`parbox[t]`)
+\newcolumntype{C}[1]{>{\hsize=#1\hsize\centering\arraybackslash}X}
+
+
+%---------------------------------------------------------------------------
+
+% TODO: Poniższe mogą się wyświetlać lub nie w zależności od wariantów wyżej
+% Np. języka lub innej konfiguracji
+% Prawdopodobnie niektóre z poniższych nie są nigdy używane.
+% Jeśli o tym wiesz, to warto rozwinąć ten szablon i udostępnić go dalej ;)
+
+\author{TODO: Author}
+\shortauthor{TODO: Short~author}
+
+\titlePL{TODO: TitlePL}
+\titleEN{TODO: TitleEN}
+
+% Skrócone wersje tytułów po polsku/angielsku
+% wyświetlane np. gdy normalne są bardzo długie
+\shorttitlePL{TODO: Short title PL}
+\shorttitleEN{TODO: Short title EN}
+
+% Rodzaj pracy
+\thesistype{Praca dyplomowa magisterska}
+%\thesistype{Master of Science Thesis}
+
+% Promotor/opiekun pracy
+\supervisor{TODO: Promotor}
+
+% Kierunek studiów
+\degreeprogramme{Informatyka Stosowana}
+
+% TODO: DATE
+\date{2017}
+
+% TODO: Można zakomentować jeśli nie chcemy wyświetlać katedry
+% TODO: Nie jest pewne, czy to jest gdzieś wykorzystywane
+%\department{TODO: Katedra ~}
+
+% Wydział
+\faculty{Wydział Fizyki i Informatyki Stosowanej}
+
+% TODO: Nie jest pewne czy jest wykorzystywane
+%\acknowledgements{Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np. dla promotora, żony, sąsiada itp.}
+
+
+\setlength{\cftsecnumwidth}{10mm}
+
+%---------------------------------------------------------------------------
+\setcounter{secnumdepth}{4}
+
+\begin{document}
+
+
+% =====  STRONA TYTULOWA PRACY INŻYNIERSKIEJ ====
+% ostatnia modyfikacja: 2011/03/09, K. Malarz
+
+\thispagestyle{empty}
+
+%% ------------------------ NAGLOWEK STRONY ---------------------------------
+\includegraphics[height=37.5mm]{images/agh_nzw_a_pl_1w_wbr_cmyk}\\
+\rule{30mm}{0pt}
+{\Large\textsf{Wydział Fizyki i Informatyki Stosowanej}}\\
+\rule{\textwidth}{3pt}\\
+\rule[2.75ex]
+{\textwidth}{1pt}%\\
+\vspace{1em}\rule{30mm}{0pt}
+\begin{center}
+    {\bf\huge\textsf{Praca inżynierska}}\\
+    \vspace{13ex}
+    % --------------------------- IMIE I NAZWISKO -------------------------------
+    {\bf\LARGE\textsf{TODO: Imię nazwisko strona tytułowa}}\\
+    \vspace{3ex}
+    {\sf \normalsize kierunek studiów:} {\bf\normalsize\textsf{TODO: kierunek strona tytułowa}}\\
+    \vspace{15ex}
+    %% ------------------------ TYTUL PRACY --------------------------------------
+    {\bf\Huge\textsf{TODO: Tytuł na okładce}}\\
+    \vspace{14ex}
+    %% ------------------------ OPIEKUN PRACY ------------------------------------
+    {\sf \LARGE Opiekun:} {\bf\LARGE\textsf{TODO: opiekun na stronie tytułowej}}\\
+    \vspace{22ex}
+    \textsf{\bf\Large\textsf{TODO: miejsce, data np.: Kraków, jakiśmiesiąc 2017}}
+\end{center}
+%% =====  STRONA TYTUŁOWA PRACY INŻYNIERSKIEJ  ====
+
+\newpage
+
+%% =====  TYŁ STRONY TYTUŁOWEJ PRACY INŻYNIERSKIEJ  ====
+{\sf Oświadczam, świadomy odpowiedzialności karnej za~poświadczenie nieprawdy, że~niniejszą pracę dyplomową wykonałem osobiście i~samodzielnie i~nie korzystałem ze~źródeł innych niż wymienione w~pracy.}
+
+\vspace{14ex}
+
+%\begin{center}
+%    \begin{tabular}{lr}
+%        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &
+%        ................................................................. \\
+%        ~ & {\sf (czytelny podpis)} \\
+%    \end{tabular}
+%\end{center}
+
+%% =====  TYL STRONY TYTULOWEJ PRACY INŻYNIERSKIEJ  ====
+\newpage
+%\titlepages
+
+% Ponowne zdefiniowanie stylu `plain`, aby usunąć numer strony z pierwszej strony spisu treści i poszczególnych rozdziałów.
+\fancypagestyle{plain}
+{
+	% Usuń nagłówek i stopkę
+	\fancyhf{}
+	% Usuń linie.
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
+
+\include{intro}
+\include{theory}
+\include{main}
+\include{summary}
+
+\printbibliography
+
+\end{document}
