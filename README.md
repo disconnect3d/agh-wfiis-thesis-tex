@@ -17,6 +17,8 @@ Szablon był testowany w edytorze TexStudio.
 
 Kontrybucje/usprawnienia są mile widziane przez [Pull Requests](https://help.github.com/articles/creating-a-pull-request/).
 
+Przy okazji warto też rzucić okiem na skrypt dorzucający twarde spację - https://github.com/Alexander3/tex-fixer
+
 ---
 
 Szablon bazuje na:
