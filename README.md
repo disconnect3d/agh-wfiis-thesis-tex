@@ -15,6 +15,8 @@ Szablon wspiera między innymi takie rzeczy jak:
 
 Szablon był testowany w edytorze TexStudio.
 
+Kontrybucje/usprawnienia są mile widziane przez [Pull Requests](https://help.github.com/articles/creating-a-pull-request/).
+
 ---
 
 Szablon bazuje na:
