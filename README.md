@@ -26,4 +26,3 @@ Szablon bazuje na:
 
 2. Stronie tytułowej pobranej z [szablonów dostępnych na stronach WFiIS](http://www.ftj.agh.edu.pl/pl/96.html).
 
-Szablon ma również dołączone trochę bardziej lub mniej przydatnych i należy go używać z głową.
