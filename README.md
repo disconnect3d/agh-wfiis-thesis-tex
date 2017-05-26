@@ -15,6 +15,11 @@ Szablon wspiera między innymi takie rzeczy jak:
 
 Szablon był testowany w edytorze TexStudio.
 
+Kontrybucje/usprawnienia są mile widziane przez [Pull Requests](https://help.github.com/articles/creating-a-pull-request/).
+
+Przy okazji warto też rzucić okiem na:
+* skrypt dorzucający twarde spację - https://github.com/Alexander3/tex-fixer
+* kolorowanie składni przy użyciu Pygments :heart: (paczka LaTeXowa `minted`) - http://stackoverflow.com/a/2126808
 ---
 
 Szablon bazuje na:
